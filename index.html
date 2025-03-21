@@ -116,11 +116,15 @@
     emailjs.send("service_4cikbl7", "template_xdkxuee", templateParams)
     .then(function(response) {
         console.log("E-mail enviado com sucesso!", response);
-        alert("E-mail enviado!");
+        let confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+        confirmationModal.show();
     }, function(error) {
         console.error("Erro ao enviar e-mail:", error);
         alert("Erro ao enviar o e-mail.");
     });
+
+
+        // this.reset();
 });
 </script>
 
